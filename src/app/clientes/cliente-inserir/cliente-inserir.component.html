@@ -5,12 +5,12 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Digite o nome</mat-label>
-      <input matInput type="text" ngModel name="nome" required minlength="4">
+      <input matInput type="text" ngModel name="nome" required minlength="4" #nomeInput>
       <button
-          *ngIf="nome"
+          *ngIf="nomeInput.value"
           matSuffix
           mat-icon-button
-          (click)="nome=''">
+          (click)="nomeInput.value=''">
 
           <mat-icon>close</mat-icon>
 
@@ -20,12 +20,12 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Digite o fone</mat-label>
-      <input matInput type="text" ngModel name="fone" required>
+      <input matInput type="text" ngModel name="fone" required #foneInput>
       <button
-          *ngIf="fone"
+          *ngIf="foneInput.value"
           matSuffix
           mat-icon-button
-          (click)="fone=''">
+          (click)="foneInput.value=''">
           <mat-icon>close</mat-icon>
       </button>
       <mat-error>Digite um telefone valido!</mat-error>
@@ -33,12 +33,12 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Digite o e-mail</mat-label>
-      <input matInput type="text" ngModel name="email" required>
+      <input matInput type="text" ngModel name="email" required #emailInput>
       <button
-          *ngIf="email"
+          *ngIf="emailInput.value"
           matSuffix
           mat-icon-button
-          (click)="email=''">
+          (click)="emailInput.value=''">
           <mat-icon>close</mat-icon>
       </button>
       <mat-error>Digite um email valido!</mat-error>
