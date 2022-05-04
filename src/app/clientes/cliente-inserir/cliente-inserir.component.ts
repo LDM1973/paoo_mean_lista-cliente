@@ -20,7 +20,7 @@ export class ClienteInserirComponent{
         if(form.invalid){
           return;
         }
-        this.clienteAdicionado.emit(form);
+        this.clienteAdicionado.emit(form.value);
     }
 
     // onAdicionarCliente(form: NgForm){
